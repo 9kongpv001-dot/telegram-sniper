@@ -44,7 +44,7 @@ async function redeemVoucher(cleanPhone, cleanCode) {
   }
 
   if (redeemedCodes.has(cleanCode)) {
-    return { success: false, reason: "already_processed", code: cleanCode };
+    return { success: false, reason: "already_processed", message: "ซองนี้เคยประมวลผลไปแล้ว", elapsed: "0.01ms", code: cleanCode };
   }
   redeemedCodes.add(cleanCode);
 
