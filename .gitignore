@@ -1,0 +1,6 @@
+node_modules/
+.env
+.session
+found_groups.json
+verified_giveaways.json
+*.log

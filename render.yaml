@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: telegram-truemoney-sniper
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: TG_API_ID
+        sync: false
+      - key: TG_API_HASH
+        sync: false
+      - key: TARGET_PHONE
+        sync: false
+      - key: TG_SESSION
+        sync: false
+      - key: DISCORD_WEBHOOK
+        sync: false
